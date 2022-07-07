@@ -62,6 +62,7 @@ RUN apt-get update && \
         init \
         net-tools \
         ifupdown \
+        isc-dhcp-client \
         apt-transport-https \
         ca-certificates \
         dbus-x11 \

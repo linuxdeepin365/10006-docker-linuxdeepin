@@ -103,6 +103,9 @@ config:
   security.nesting: "true"
 ```
 ```
+lxc restart deepin
+```
+```
 lxc exec deepin -- /bin/bash
 apt update && apt install docker.io docker-compose -y
 ```

@@ -59,6 +59,7 @@ ENV LANG=en_US.UTF-8
 
 RUN apt-get update && \
     env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        init \
         apt-transport-https \
         ca-certificates \
         dbus-x11 \

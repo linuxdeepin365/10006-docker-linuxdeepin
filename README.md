@@ -28,7 +28,7 @@ Run as Base Image
 ```
 FROM ghcr.io/antyung88/deepin:apricot
 ```
-# Run Deepin as LXC
+# LXC
 
 Export Image
 ```
@@ -65,13 +65,11 @@ Launch deepin in LXC
 lxc launch deepin deepin
 ```
 
+Configure ipv4
 ```
+lxc exec deepin -- /bin/bash
 echo "auto eth0" > /etc/network/interfaces
 echo "iface eth0 inet dhcp" >> /etc/network/interfaces
 touch /etc/fstab
 ifup eth0
-```
-
-```
-apt update
 ```

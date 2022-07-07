@@ -3,14 +3,14 @@ Deepin Minimal Environment in Docker
 
 ```
 REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
-ghcr.io/antyung88/deepin   minimal   7ea1be99f9e9   1 minute ago    504MB
+ghcr.io/antyung88/deepin   apricot   7ea1be99f9e9   1 minute ago    530MB
 ```
 
 # Usage
 
 Pull Image
 ```
-docker pull ghcr.io/antyung88/deepin:minimal
+docker pull ghcr.io/antyung88/deepin:apricot
 ```
 
 Run container in Docker
@@ -21,18 +21,18 @@ docker exec -it deepin_min /bin/bash
 
 Run container DIND
 ```
-docker run -itd --name deepin_min -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/antyung88/deepin:minimal
+docker run -itd --name deepin_min -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/antyung88/deepin:apricot
 ```
 
 Run as Base Image
 ```
-FROM ghcr.io/antyung88/deepin:minimal
+FROM ghcr.io/antyung88/deepin:apricot
 ```
 # Run Deepin as LXC (Work in progress)
 
 Export Image
 ```
-sudo lxc-create deepin -t oci -- --url docker://ghcr.io/antyung88/deepin:minimal
+sudo lxc-create deepin -t oci -- --url docker://ghcr.io/antyung88/deepin:apricot
 ```
 
 Tar rootfs
@@ -57,10 +57,21 @@ sudo tar -cvzf metadata.tar.gz metadata.yaml
 
 Import as LXC image
 ```
-lxc image import metadata.tar.gz rootfs.tar.gz --alias deepin:apricot
+lxc image import metadata.tar.gz rootfs.tar.gz --alias deepin
 ```
 
 Launch deepin in LXC
 ```
 lxc launch deepin deepin
+```
+
+```
+echo "auto eth0" > /etc/network/interfaces
+echo "iface eth0 inet dhcp" >> /etc/network/interfaces
+touch /etc/fstab
+ifup eth0
+```
+
+```
+apt update
 ```

@@ -1,0 +1,16 @@
+name: Test Github Packages
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build-stable:
+    name: Test Github Packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repo 
+        uses: actions/checkout@v3
+      - run: |
+          docker build . -t ghcr.io/${{ secrets.USER }}/${{ secrets.IMAGE }}:test

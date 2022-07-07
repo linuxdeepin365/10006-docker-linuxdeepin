@@ -28,7 +28,7 @@ Run as Base Image
 ```
 FROM ghcr.io/antyung88/deepin:apricot
 ```
-# Run Deepin as LXC (Work in progress)
+# Run Deepin as LXC
 
 Export Image
 ```

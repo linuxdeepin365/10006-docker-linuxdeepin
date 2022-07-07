@@ -19,5 +19,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
       - run: |
-          docker build . -t ghcr.io/${{ github.actor }}/${{ secrets.image }}:latest
-          docker push ghcr.io/${{ github.actor }}/${{ secrets.image }}:latest
+          docker build . -t ghcr.io/${{ github.actor }}/${{ secrets.image }}:minimal
+          docker push ghcr.io/${{ github.actor }}/${{ secrets.image }}:minimal

@@ -87,9 +87,10 @@ Fix systemctl
 ```
 systemctl mask systemd-logind.service
 systemctl mask systemd-journald-audit.socket
+exit
 ```
 
-Priviliged Container 
+## Priviliged Container 
 ```
 lxc config edit deepin
 ```
@@ -107,5 +108,7 @@ lxc restart deepin
 ```
 ```
 lxc exec deepin -- /bin/bash
-apt update && apt install docker.io docker-compose -y
+apt update
+apt install apt-transport-https ca-certificates curl software-properties-common
+apt install docker-ce
 ```

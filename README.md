@@ -81,3 +81,28 @@ echo "iface eth0 inet dhcp" >> /etc/network/interfaces
 touch /etc/fstab
 ifup eth0
 ```
+
+Fix systemctl
+
+```
+systemctl mask systemd-logind.service
+systemctl mask systemd-journald-audit.socket
+```
+
+Priviliged Container 
+```
+lxc config edit deepin
+```
+Add the following lines under config
+```
+config:
+  linux.kernel_modules: ip_tables,ip6_tables,netlink_diag,nf_nat,overlay
+  raw.lxc: "lxc.apparmor.profile=unconfined\nlxc.cap.drop= \nlxc.cgroup.devices.allow=a\nlxc.mount.auto=proc:rw
+    sys:rw"
+  security.privileged: "true"
+  security.nesting: "true"
+```
+```
+lxc exec deepin -- /bin/bash
+apt update && apt install docker.io docker-compose -y
+```

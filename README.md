@@ -57,7 +57,7 @@ sudo tar -cvzf metadata.tar.gz metadata.yaml
 
 Import as LXC image
 ```
-lxc image import metadata.tar.gz rootfs.tar.gz --alias deepin
+lxc image import metadata.tar.gz rootfs.tar.gz --alias deepin:apricot
 ```
 
 Launch deepin in LXC

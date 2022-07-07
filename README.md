@@ -1,4 +1,4 @@
-# docker-deepin-minimal
+# docker-deepin-apricot-minimal [![Release Github Packages](https://github.com/antyung88/docker-deepin-minimal/actions/workflows/release.yml/badge.svg)](https://github.com/antyung88/docker-deepin-minimal/actions/workflows/release.yml)
 Deepin Minimal Environment in Docker 
 
 ```

@@ -15,7 +15,7 @@ docker pull ghcr.io/antyung88/deepin:apricot
 
 Run container in Docker
 ```
-docker run -itd --name deepin_min ghcr.io/antyung88/deepin:minimal
+docker run -itd --name deepin_min ghcr.io/antyung88/deepin:apricot
 docker exec -it deepin_min /bin/bash
 ```
 

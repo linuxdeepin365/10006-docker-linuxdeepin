@@ -40,6 +40,7 @@ FROM ghcr.io/antyung88/deepin:apricot
 
 Export Image
 ```
+sudo apt install -y lxc-utils
 sudo lxc-create deepin -t oci -- --url docker://ghcr.io/antyung88/deepin:apricot
 ```
 

@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 ENV DEEPIN_MIRROR=http://packages.deepin.com/deepin/
 

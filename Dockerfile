@@ -60,23 +60,17 @@ ENV LANG=en_US.UTF-8
 RUN apt-get update && \
     env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         init \
-        net-tools \
-        ifupdown \
-        isc-dhcp-client \
         apt-transport-https \
         ca-certificates \
         dbus-x11 \
         deepin-keyring \
         gnupg \
         libcups2 \
-        libpulse0 \
-        libxv1 \
-        locales-all \
-        mesa-utils \
-        mesa-utils-extra \
+        locales \
         nano \
         procps \
         psmisc && \
+
     /cleanup && rm /cleanup
 
 CMD ["bash"]

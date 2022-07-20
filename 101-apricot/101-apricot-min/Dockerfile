@@ -7,8 +7,10 @@ ENV DEEPIN_RELEASE=apricot
 RUN apt-get update && \
     env DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
         multistrap \
+        wget \
         gnupg && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 425956BB3E31DF51 && \
+    wgey https://community-packages.deepin.com/deepin/pool/main/d/deepin-keyring/deepin-keyring_2021.06.07-1_all.deb && \
+    dpkg -i deepin-keyring_2021.06.07-1_all.deb \
     mkdir -p /rootfs/etc/apt && \
     cp /etc/apt/trusted.gpg /rootfs/etc/apt/trusted.gpg && \
     echo "deb     $DEEPIN_MIRROR $DEEPIN_RELEASE main non-free contrib" > /rootfs/etc/apt/sources.list && \

@@ -20,5 +20,5 @@ jobs:
           password: ${{ secrets.GH_TOKEN }}
       - run: |
           env
-          docker build . -t ghcr.io/${{ github.actor }}/${{ secrets.image }}:apricot
-          docker push ghcr.io/${{ github.actor }}/${{ secrets.image }}:apricot
+          docker build . -t ghcr.io/linuxdeepin365/10006-docker-deepin-apricot-minimal:apricot
+          docker push ghcr.io/linuxdeepin365/10006-docker-deepin-apricot-minimal:apricot

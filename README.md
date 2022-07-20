@@ -16,4 +16,5 @@
 
 ```
 docker pull ghcr.io/linuxdeepin365/10006-docker-linuxdeepin:101-apricot-min
+docker run -it ghcr.io/linuxdeepin365/10006-docker-linuxdeepin:101-apricot-min bash
 ```

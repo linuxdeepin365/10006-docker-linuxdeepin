@@ -18,4 +18,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
-      - run: ./1.build.all.sh 1
+      - run: |
+         pwd
+         ls
+         ./1.build.all.sh 1

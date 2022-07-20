@@ -15,5 +15,5 @@
 ### 3.1 101-apricot-min
 
 ```
-ghcr.io/linuxdeepin365/10006-docker-deepin-apricot-minimal:101-apricot-min
+ghcr.io/linuxdeepin365/10006-docker-linuxdeepin:101-apricot-min
 ```

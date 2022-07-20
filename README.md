@@ -1,5 +1,24 @@
-# docker-deepin-apricot-minimal [![Release Github Packages](https://github.com/antyung88/docker-deepin-minimal/actions/workflows/release.yml/badge.svg)](https://github.com/antyung88/docker-deepin-minimal/actions/workflows/release.yml)
+# what
+
+1. docker linuxdeepin
+
+
+# why
+
+1. run and test linuxdeepin in docker
+
+
+
+# how
+
+
+
+
+
+
+# 10006-docker-deepin-apricot-minimal [![Release Github Packages](https://github.com/linuxdeepin365/10006-docker-deepin-apricot-minimal/actions/workflows/release.yml/badge.svg)](https://github.com/linuxdeepin365/10006-docker-deepin-apricot-minimal/actions/workflows/release.yml)
 Deepin Minimal Environment in Docker 
+
 
 ```
 REPOSITORY                                                           TAG       IMAGE ID       CREATED         SIZE

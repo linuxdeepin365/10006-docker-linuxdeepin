@@ -9,7 +9,7 @@ RUN apt-get update && \
         multistrap \
         wget \
         gnupg && \
-    wgey https://community-packages.deepin.com/deepin/pool/main/d/deepin-keyring/deepin-keyring_2021.06.07-1_all.deb && \
+    wget https://community-packages.deepin.com/deepin/pool/main/d/deepin-keyring/deepin-keyring_2021.06.07-1_all.deb && \
     dpkg -i deepin-keyring_2021.06.07-1_all.deb \
     mkdir -p /rootfs/etc/apt && \
     cp /etc/apt/trusted.gpg /rootfs/etc/apt/trusted.gpg && \
